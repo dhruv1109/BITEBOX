@@ -1,0 +1,18 @@
+.my-navbar{
+    background: teal;
+}
+.nav-item{
+    color: black;
+}
+.hoe{
+    color: cornsilk;
+}
+.hio{
+    font-size: larger;
+    font-weight: bold;
+    padding-right: 4%;
+}
+.hio:hover{
+    color: #F9CAEC;
+    
+}
