@@ -1,0 +1,76 @@
+.headerr{
+    text-align: center;
+    padding-top: 5%;
+    background-image: url(https://image.freepik.com/free-vector/memphis-pattern_1045-810.jpg);
+    padding-bottom: 5%;
+}
+.ho{
+    text-align: center;
+    padding-top: 3%;
+    font-size: 40px;
+    font-weight: 900;
+    padding-bottom: 3%;
+}
+.container{
+    font-family: 'Epilogue', sans-serif;
+}
+.container-fluid{
+    font-family: 'Epilogue', sans-serif;
+}
+.dem{
+    font-family: 'Epilogue', sans-serif;
+}
+.Images{
+    padding-left: 5%;
+    padding-right: 5%;
+    background-image: url(https://www.freepik.com/free-vector/abstract-wavy-shape-pattern-blank-background-set_8998552.htm#page=1&query=pattern&position=12);
+}
+.info{
+    padding-top: 5%;
+    background-image: url(https://image.freepik.com/free-vector/memphis-pattern_1045-810.jpg);
+}
+.footerr{
+    text-align: center;
+    margin-top: 4%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #66b2b2;
+    border-bottom: 20px solid teal;
+}
+.two{
+    padding-bottom: 5%;
+}
+.cards{
+    text-align: center;
+    margin-bottom: 3%;
+    width: 30%;
+    transition: transform .2s;
+}
+.cards:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+ 
+  .lelo{
+      padding-left: 3%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      font-size: 40px;
+      font-weight: 900;
+  }
+  .card-text{
+      padding-top: 2%;
+      padding-bottom: 2%;
+      font-weight: 500;
+  }
+  .namo{
+      padding-top: 1%;
+      background-color: #ffea66;
+      border-top: 4px solid #d0b12b;
+      border-bottom: 4px solid #d0b12b;
+    }
+  .naam{
+      font-size: 30px;
+      font-weight: 500;
+  }
