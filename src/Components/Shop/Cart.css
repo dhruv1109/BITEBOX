@@ -1,0 +1,37 @@
+.cart{
+    font-weight: bold;
+    text-align: center;
+}
+.plane{
+    background-color:#66b2b2;
+    border: 5px inset teal; 
+    border-radius: 22px;
+}
+
+.items{
+    text-align: center;
+    padding-top: 2%;
+    font-weight: bold;
+    font-size: large;
+    padding-bottom: 2%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+.details{
+    border-top: 1px solid black;
+}
+.button{
+    padding-top: 2%;
+    text-align: center;
+    padding-bottom: 4%;
+}
+.btnoo{
+    background-color: teal;
+    border-bottom: 8px solid #004c4c;
+    width: 30%;
+   
+}
+select{
+    padding-left: 2%;
+    padding-top: 1%;
+}

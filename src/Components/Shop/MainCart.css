@@ -1,0 +1,22 @@
+.leeds{
+    
+    padding-top: 5%;
+    text-align: center;
+    border: 4px solid teal;
+    padding-bottom: 5%;
+    background-color: whitesmoke;
+    width: 50%;
+}
+.papa{
+    
+    background-image: url(https://as1.ftcdn.net/jpg/00/95/63/36/500_F_95633689_oBuCYmHIFSabh2y8cfAoSLIsgjW7VXAA.jpg);
+}
+.bi{
+    transition: transform .2s;
+}
+.bi:hover{
+    transform: scale(1.1);
+}
+.details{
+    padding-top: 3%;
+}
