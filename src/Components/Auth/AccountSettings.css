@@ -1,0 +1,29 @@
+.formyo{
+    width: 50%;
+    margin: auto;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+
+.form-group{
+    padding-top: 4%;
+}
+.boton{
+    width: 30%;
+    text-align: center;
+    background-color: teal;
+    border-bottom: 8px solid  #004c4c;
+    color: white;
+    transition: transform .2s;
+}
+.boton:hover{
+    transform: scale(1.2);
+}
+.title{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 4%;
+}
+.pp{
+    padding-bottom: 3%;
+}

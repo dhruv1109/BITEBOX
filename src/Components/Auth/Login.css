@@ -1,0 +1,65 @@
+.form-group{
+    padding-bottom: 3%;
+}
+.containers {   
+ width: 40% ;
+ border-top: 8px solid teal;
+ box-shadow: 5px 5px 5px 5px #888888;
+ background-color: whitesmoke;
+}
+.dad{
+    padding-bottom: 10%;
+    padding-top: 5%;
+    background-image: url(https://image.freepik.com/free-vector/flat-geometric-shapes-background_23-2148383901.jpg);
+}
+button{
+    width: 50%;
+    margin: auto;
+}
+.Or {
+    text-align: center;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+.signup{
+    padding-bottom: 3%;
+    text-align: center;
+    font-weight: 700;
+}
+.btn-primary{
+    background-color: teal;
+    border-bottom: 8px solid #004c4c;
+    transition: transform .2s;
+}
+.btn-primary:hover{
+    transform: scale(1.2);
+}
+.form-group{
+    transition: transform .2s;
+}
+.form-group:hover{
+    transform: scale(1.2);
+}
+.btno{
+    background-color: #db4a39;
+    color: whitesmoke;
+    border-bottom: 8px solid brown;
+    transition: transform .2s;
+}
+.btno:hover{
+    transform: scale(1.2);
+}
+.oro{
+    padding-top: 3%;
+}
+label{
+    font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+    .container{
+        width: 80%;
+    }
+    .container-fluid{
+        width: 80%;
+    }
+}
