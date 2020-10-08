@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from'./images/BiteBoxLogo.jpeg'
+import logo from'./Images/BiteBoxLogo.jpeg'
 import { Link } from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import './ShopSummary.css'

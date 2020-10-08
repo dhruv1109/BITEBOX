@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom'
 import Cart from './Cart'
 import { addToCart} from '../../store/actions/cartActions'
 import './ShopDetails.css'
-import logo from './images/BiteBoxLogo.jpeg'
+import logo from './Images/BiteBoxLogo.jpeg'
 class ShopDetails extends Component {
   calculateAdd = (menu, shop, id) => {
     this.props.addToCart(menu, shop, id)
