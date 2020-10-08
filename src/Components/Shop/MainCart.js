@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import { placeOrder } from '../../store/actions/orderActions'
 import './MainCart.css'
 class MCart extends Component {
 state = {
-   location: "",
-   delivery: "",
+   location: "Hostel-A",
+   delivery: "Delivery",
 }
 handleChange = (e) => {
   console.log(this.state)
@@ -35,7 +35,7 @@ handleSubmit = (addToCart, auth) => {
                   </div>
               ))}    
             <div className="details">
-            <select className="btn btn-info" id="location" onChange={this.handleChange} required>
+            <select className="btn btn-info" type="button" id="location" onChange={this.handleChange} required>
               <option value="Hostel A">Hostel A</option>
               <option value="Hostel B">Hostel B</option>
               <option value="Hostel C">Hostel C</option>
@@ -60,7 +60,7 @@ handleSubmit = (addToCart, auth) => {
               {addToCart.shop.Tax=== 0? <div></div>: <h4>Taxes: Rs { addToCart.shop.Tax}</h4> }  
               <h4>Delivery Charges:(On orders below Rs {addToCart.shop.MinOrder}) Rs { addToCart.shop.DeliveryCharge } </h4>
               <h3 id="cost" onChange={this.handleChange} >Total Cost: Rs { addToCart.cartcost}</h3>     
-               <button className="btn btn-info bi" type="button"onClick={this.handleSubmit(addToCart, auth)} >PLACE ORDER</button> 
+              <Link to="/PAOrders"> <button className="btn btn-info bi" type="button"onClick={this.handleSubmit(addToCart, auth)} >PLACE ORDER</button> </Link>
              </div>
              </form>
                 

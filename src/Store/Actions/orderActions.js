@@ -1,4 +1,5 @@
 export const  placeOrder = (cred, addToCart, auth  ) => {
+   console.log(cred);
     return (dispatch, getstate, { getFirestore}) =>{
         const firestore = getFirestore();
         let Delivery = true;
