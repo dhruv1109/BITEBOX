@@ -26,7 +26,7 @@ class ShopDetails extends Component {
             <div className="col-12 col-md-7 tit">
                 <h1>{shop.name}</h1>
                 <p>{ shop.Discount === 0?  <span></span>  :<p>Yay dicount of Rs {shop.Discount}</p>}
-                <br />{shop.MinOrder === 0? <span></span>:<div>Free Delivery on order above Rs {shop.MinOrder}</div>} 
+                <br />{shop.MinOrder === 0? <span></span>:<span>Free Delivery on order above Rs {shop.MinOrder}</span>} 
               </p>
             </div>
           </div>

@@ -27,8 +27,8 @@ class Cart extends Component{
          <h3>Dishes: {addToCart.cartnumber }</h3>   
          <h3>{  addToCart.shop.name }</h3>
                   <form className="plane"> 
-                  {addToCart.cartItems.map((item) => (
-                    <div key={item.id} className="items">
+                  {addToCart.cartItems.map((item, index) => (
+                    <div key={index} className="items">
                     <div>{item.Name}</div>
                     <div className="right">
                     <div> Rs { item.Price }</div>

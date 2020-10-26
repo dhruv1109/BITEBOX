@@ -18,9 +18,18 @@ firestore.collection('Order').doc(OrderID).set({
            User: firestore.collection('Users').doc(auth.uid)
         }).then(()=> {
             dispatch({ type: 'ORDER_PLACED'});
+           
         }).catch(err => {
             dispatch({ type: 'ORDER_ERROR', err });
-         })
+         });
+         for(var i= 1; i< addToCart.cartnumber; i++){
+            firestore.collection('Order').doc(OrderID).collection('Item').add({
+                Name: addToCart.cartItems.Name,
+                Price: addToCart.cartItems.Price,
+                reference: firestore.collection('Outlet').doc(addToCart.shopid).collection('Menu').doc(addToCart.cartItems.id)
+            });
+        }
+        
          firestore.collection('Users').doc(auth.uid).collection('orders').doc(OrderID).set({
            reference: firestore.collection('Order').doc(OrderID),
            Price: addToCart.cartcost, 

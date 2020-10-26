@@ -5,7 +5,7 @@ import { placeOrder } from '../../store/actions/orderActions'
 import './MainCart.css'
 class MCart extends Component {
 state = {
-   location: "Hostel-A",
+   location: "",
    delivery: "Delivery",
 }
 handleChange = (e) => {
@@ -48,7 +48,7 @@ generateID = (length) => {
                   </div>
               ))}    
             <div className="details">
-            <select className="btn btn-info" type="button" id="location" onChange={this.handleChange} required>
+            <select className="btn btn-info" type="button" id="location" onChange={this.handleChange} >
               <option value="Hostel A">Hostel A</option>
               <option value="Hostel B">Hostel B</option>
               <option value="Hostel C">Hostel C</option>
