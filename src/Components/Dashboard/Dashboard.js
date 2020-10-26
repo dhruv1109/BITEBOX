@@ -17,18 +17,37 @@ class Dashboard extends Component {
                  <img src={logo} alt={logo} width="350" height="350"  />
                </div> 
                <h4 className="ho"> YOUR ONE STOP LOCATION FOR FOOD ORDERING....</h4>  
-               <div className=" Images ">
-                <div className="row">
-                  <div className="col-12 col-md-4">
-                     <img src={img1} alt={logo} width="400" height="335" />
-                  </div>
-                  <div className="col-12 col-md-4">
-                     <img src={oat} alt={logo} width="400" height="335" />
-                  </div>
-                  <div className="col-12 col-md-4">
-                     <img src="https://www.campusutra.com/EventImages/LM%20Thapar%20School%20of%20Management%20Admission%202019.JPG" alt={logo} width="400" height="335" />
-                  </div>
-                </div>   
+               <div className=" Images "> 
+  <div id="myCarousel" className="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div className="carousel-inner">
+      <div className="item active">
+        <img src={logo} alt="Los Angeles" width="500" />
+      </div>
+      <div className="item">
+        <img src={img1} alt="Chicago" width="100%" />
+      </div>   
+      <div className="item">
+        <img src={oat} alt="New york" width="100" />
+      </div>
+    </div>
+
+    
+    <a className="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span className="glyphicon glyphicon-chevron-left"></span>
+      <span className="sr-only">Previous</span>
+    </a>
+    <a className="right carousel-control" href="#myCarousel" data-slide="next">
+      <span className="glyphicon glyphicon-chevron-right"></span>
+      <span className="sr-only">Next</span>
+    </a>
+  </div>
+                  
                
                </div>
                <h2 className="lelo"> FEW REASONS WHY YOU SHOULD USE OUR SERVICES</h2> 

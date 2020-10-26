@@ -15,9 +15,22 @@ handleChange = (e) => {
   })
 }
 handleSubmit = (addToCart, auth) => {
-  this.props.placeOrder(this.state, addToCart, auth)
+  var OrderID = this.generateID(8);
+  this.props.placeOrder(this.state, addToCart, auth, OrderID)
 }
+generateID = (length) => {
+  var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('');
 
+    if (! length) {
+        length = Math.floor(Math.random() * chars.length);
+    }
+
+    var str = '';
+    for (var i = 0; i < length; i++) {
+        str += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return str;
+}
     render() {
       const  {addToCart, auth } = this.props 
       if(addToCart.cartnumber===0) return <Redirect to='/cart'/>        
@@ -91,7 +104,7 @@ const mapStatToProps = (state) => {
   }
 const mapDispatchToProps = (dispatch) => {
   return {
-     placeOrder: (cred, addToCart, auth) => dispatch(placeOrder(cred, addToCart, auth)),
+     placeOrder: (cred, addToCart, auth, OrderID ) => dispatch(placeOrder(cred, addToCart, auth, OrderID)),
     
   }
 }  
