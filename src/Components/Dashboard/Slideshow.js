@@ -4,12 +4,13 @@ import 'react-slideshow-image/dist/styles.css'
 import EFFECTS from './images/EFFECTS.jpg'
 import oat from './images/oat.jpg'
 import thapatm from './images/thapatm.jpg'
+import './Slideshow.css'
  
 
  
 const Slideshow = () => {
     return (
-      <div className="slide-container">
+      <div className="slide-container" >
         <Slide>
           <div className="each-slide" >
             <div style={{'backgroundImage': `url(${thapatm})` }}>

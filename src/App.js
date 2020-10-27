@@ -9,7 +9,6 @@ import PreviousOrders from './Components/Dashboard/PreviousOrders';
 import Cart from './Components/Shop/Cart'
 import Account from './Components/Auth/AccounSettings' 
 import MCart from './Components/Shop/MainCart';
-import OrderPlaced from './Components/Dashboard/OrderPlaced';
 class App extends Component {
 
   render() {
@@ -26,7 +25,6 @@ class App extends Component {
             <Route path='/Porders' component={PreviousOrders} />
             <Route path='/cart' component={Cart} />
             <Route path='/MCart' component={MCart} />
-            <Route path='/PAOrders' component={OrderPlaced} />
           </Switch>
         </div>
       </BrowserRouter>

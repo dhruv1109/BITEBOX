@@ -21,6 +21,7 @@
     font-family: 'Epilogue', sans-serif;
 }
 .Images{
+    height: 50%;
     padding-left: 5%;
     padding-right: 5%;
     background-image: url(https://www.freepik.com/free-vector/abstract-wavy-shape-pattern-blank-background-set_8998552.htm#page=1&query=pattern&position=12);
@@ -41,12 +42,16 @@
 }
 .two{
     width: 100px;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 .cards{
     text-align: center;
     margin-bottom: 3%;
     width: 20%;
     height: 20%;
+    padding-right: 5%;
+    padding-left: 5%;
     transition: transform .2s;
 }
 .cards:hover {
