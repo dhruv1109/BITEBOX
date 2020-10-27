@@ -29,9 +29,10 @@ class Cart extends Component{
                   <form className="plane"> 
                   {addToCart.cartItems.map((item, index) => (
                     <div key={index} className="items">
-                    <div>{item.Name}</div>
+                    <div>{item.Name}  
+                       Rs { item.Price }
+                    </div>
                     <div className="right">
-                    <div> Rs { item.Price }</div>
                       <button
                         className="btn btn-outline-danger"
                         type="button" 

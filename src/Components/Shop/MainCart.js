@@ -39,11 +39,11 @@ generateID = (length) => {
             <div  className="container leeds">
               <form  >
               <h3>{ addToCart.shop.name }</h3>
-                  {addToCart.cartItems.map((item) => (
-                    <div key={item.id} className="items">
-                    <div>{item.Name}</div>
+                  {addToCart.cartItems.map((item,index) => (
+                    <div key={index} className="items">
                     <div className="right">
-                    <div>Rs { item.Price }</div>
+                      {item.Name}
+                     Rs { item.Price }
                     </div>
                   </div>
               ))}    
@@ -73,7 +73,7 @@ generateID = (length) => {
               {addToCart.shop.Tax=== 0? <div></div>: <h4>Taxes: Rs { addToCart.shop.Tax}</h4> }  
               <h4>Delivery Charges:(On orders below Rs {addToCart.shop.MinOrder}) Rs { addToCart.shop.DeliveryCharge } </h4>
               <h3 id="cost" onChange={this.handleChange} >Total Cost: Rs { addToCart.cartcost}</h3>     
-              <Link to="/PAOrders"> <button className="btn btn-info bi" type="button"onClick={this.handleSubmit(addToCart, auth)} >PLACE ORDER</button> </Link>
+              <Link to="/"> <button className="btn btn-info bi" type="button"onClick={this.handleSubmit(addToCart, auth)} >PLACE ORDER</button> </Link>
              </div>
              </form>
                 

@@ -18,11 +18,16 @@ firestore.collection('Order').doc(OrderID).set({
            User: firestore.collection('Users').doc(auth.uid)
         }).then(()=> {
             for(var i= 1; i< addToCart.cartnumber; i++){
-                firestore.collection('Order').doc(OrderID).collection('Item').doc(OrderID).set({
+                firestore.collection('Order').doc(OrderID).collection('Item').set({
                    Name: addToCart.cartItems[i].Name,
                    Price: addToCart.cartItems[i].Price,
                    reference: firestore.collection('Outlet').doc(addToCart.shopid).collection('Menu').doc(addToCart.cartItems.id)
          });
+         if (i > 0) {
+            if (addToCart.cartItems[0].Name === addToCart.cartItems[i].Name) {
+              break;
+            }
+          }
      }
             dispatch({ type: 'ORDER_PLACED'});
            
