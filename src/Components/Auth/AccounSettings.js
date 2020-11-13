@@ -41,6 +41,9 @@ class Account extends Component {
                  <div className="boton">
                    <Link to='/'><button type="submit" className="btn" >Submit</button></Link>
                 </div>
+                <div>
+                { auth.name === ' '? <div>Enter above details to continue</div>:  <Link to='/'><button type="submit">SKIP</button></Link>  }
+                </div>
                </div> 
 </form>
            </div>
