@@ -8,17 +8,12 @@ import './Navbar.css'
     return (
 
       <div>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-       </button>
-        <div  className="collapse navbar-collapse" id="navbarSupportedContent" >
-        <ul className="navbar-nav right">
-        <NavLink to='/Porders'><li className="nav-item">YOUR ORDERS</li></NavLink>
-          <li className="nav-item" ><span onClick={props.signOut}>LOGOUT</span></li>
-        <NavLink to='/account'><li className="nav-item">ACCOUNT</li></NavLink>
-        </ul>
+        <div className="navbar-nav ">
+        <NavLink to='/Porders'><div className="nav-item">YOUR ORDERS</div></NavLink>
+          <div className="nav-item" ><span onClick={props.signOut}><i class="fas fa-sign-out-alt fa-lg"></i></span></div>
+        <NavLink to='/cart'><div className="nav-item"><i class="fas fa-shopping-cart fa-lg"></i></div></NavLink>
         </div>
-      </div>
+        </div>
     )
   }
   
