@@ -8,7 +8,13 @@ render(){
     if(orders){
      return(
         <div>
-           
+           {orders && orders.map(orders => {
+             return(
+               <div key={orders.id}>
+               <div> {orders.order}   {orders.Price}  </div>
+               </div>
+             )
+           })}
         </div>
     )}
     else {
@@ -20,15 +26,14 @@ render(){
 }
 }
 const mapStateToProps = state => {
-    console.log(state);
     return {
-      orders : state.firestore.data.orders,
+      orders : state.firestore.ordered.orders,
       auth: state.firebase.auth
     };
   };
 
 export default compose(connect(mapStateToProps), 
-firestoreConnect(Props => [
+firestoreConnect(Props => [{ collection: 'Users' },
 {
   collection: 'Users',
   doc: Props.auth.uid,
