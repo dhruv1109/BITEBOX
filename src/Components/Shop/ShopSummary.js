@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from'./Images/BiteBoxLogo.jpeg'
 import { Link } from 'react-router-dom'
-import Loader from 'react-loader-spinner'
+
 import './ShopSummary.css'
 const ShopSummary = ({shop}) => {
     if(shop){
@@ -19,13 +19,7 @@ const ShopSummary = ({shop}) => {
     else{
         return(
             <div>
-                <Loader
-               type="Puff"
-               color="#00BFFF"
-               height={100}
-               width={100}
-               timeout={5000} //3 secs
-               />
+               
             </div>
         )
     }

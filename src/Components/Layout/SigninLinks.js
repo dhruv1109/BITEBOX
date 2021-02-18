@@ -11,7 +11,7 @@ import './Navbar.css'
         <div className="navbar-nav ">
         <NavLink to='/Porders'><div className="nav-item">YOUR ORDERS</div></NavLink>
           <div className="nav-item" ><span onClick={props.signOut}><i class="fas fa-sign-out-alt fa-lg"></i></span></div>
-        <NavLink to='/cart'><div className="nav-item"><i class="fas fa-shopping-cart fa-lg"></i></div></NavLink>
+        <NavLink to='/cart'><div className="nav-item"><i className="fas fa-shopping-cart fa-lg"></i></div></NavLink>
         </div>
         </div>
     )
