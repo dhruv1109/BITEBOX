@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ShopSummary from './ShopSummary'
-import {addToCart} from "../../store/actions/cartActions";
+import {addToCart} from "../../Store/Actions/cartActions";
 import './ShopList.css'
 class ShopList  extends Component {
   addToCart = (product) => {

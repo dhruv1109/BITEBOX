@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { adDetails} from '../../store/actions/authActions'
+import { adDetails} from '../../Store/Actions/authActions'
 import { Link } from 'react-router-dom'
 import './AccountSettings.css'
 import { Redirect} from 'react-router-dom'

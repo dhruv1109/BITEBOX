@@ -4,7 +4,7 @@ import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
 import Cart from './Cart'
-import { addToCart} from '../../store/actions/cartActions'
+import { addToCart} from '../../Store/Actions/cartActions'
 import './ShopDetails.css'
 import logo from './Images/BiteBoxLogo.jpeg'
 class ShopDetails extends Component {

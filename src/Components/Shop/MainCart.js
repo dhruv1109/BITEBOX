@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Redirect, Link } from 'react-router-dom'
-import { placeOrder } from '../../store/actions/orderActions'
+import { placeOrder } from '../../Store/Actions/orderActions'
 import './MainCart.css'
 class MCart extends Component {
 state = {

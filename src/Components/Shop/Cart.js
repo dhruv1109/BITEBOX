@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
-import {  removeItem} from '../../store/actions/cartActions'
+import {  removeItem} from '../../Store/Actions/cartActions'
 import './Cart.css'
 class Cart extends Component{
     handleRemove = (item)=>{

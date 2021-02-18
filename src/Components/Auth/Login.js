@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { signIn, loginWithGoogle } from '../../store/actions/authActions'
+import { signIn, loginWithGoogle } from '../../Store/Actions/authActions'
 import { Redirect, NavLink } from 'react-router-dom'
 import './Login.css'
 class Login extends Component {
