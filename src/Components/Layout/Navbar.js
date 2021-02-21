@@ -6,16 +6,17 @@ import SignoutLinks from './SignoutLinks';
 import { connect } from 'react-redux'
 import './Navbar.css'
 const Navbar = (props) => {
-    const { auth } = props;
-      const links = auth.uid ? <SigninLinks /> : <SignoutLinks />;
+  const { auth } = props;
+    const links = auth.uid ? <SigninLinks /> : <SignoutLinks />;
      return(       
-        <nav className=" my-navbar navbar navbar-light " >
-            <div className="container " >
+        <nav className=" my-navbar navbar navbar-light ">   
+            
+            <div>
                <Link to='/' className="navbar-brand hio" href={logo}>BITEBOX</Link>
               
                { links }
             </div>
-           
+    
         </nav>
     )
 }

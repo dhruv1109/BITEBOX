@@ -31,14 +31,25 @@
     background-image: url(https://image.freepik.com/free-vector/memphis-pattern_1045-810.jpg);
 }
 .footerr{
-    text-align: center;
     margin-top: 4%;
     position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: #66b2b2;
-    border-bottom: 20px solid teal;
+    border-bottom: 40px solid teal;
+}
+.foothead{
+    padding-top: 2.5%;
+    text-align: center;
+  
+}
+.contacts{
+    padding-left: 3.5%;
+}
+.org{
+    text-align: right;
+    padding-right: 3.5%;
 }
 .two{
     width: 100px;

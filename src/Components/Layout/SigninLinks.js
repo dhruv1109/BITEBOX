@@ -6,13 +6,18 @@ import './Navbar.css'
  
   const SigninLinks = (props) => {
     return (
-
-      <div>
-        <div className="navbar-nav ">
-        <NavLink to='/Porders'><div className="nav-item">YOUR ORDERS</div></NavLink>
-          <div className="nav-item" ><span onClick={props.signOut}><i class="fas fa-sign-out-alt fa-lg"></i></span></div>
-        <NavLink to='/cart'><div className="nav-item"><i className="fas fa-shopping-cart fa-lg"></i></div></NavLink>
-        </div>
+       <div>
+           <button class="navbar-toggler button1" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+           </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+          <NavLink to='/Porders'><li className="nav-item oo">ORDERS</li></NavLink>
+          <span onClick={props.signOut}> <li className="nav-item oo " ><i className="fas fa-sign-out-alt fa-lg">SignOut</i></li></span>
+          <NavLink to='/cart'> <li className="nav-item oo"> <i className="fas fa-shopping-cart fa-lg">CART</i></li></NavLink>
+             </ul>
+          </div>
+  
         </div>
     )
   }

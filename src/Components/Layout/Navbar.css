@@ -10,9 +10,18 @@
 .hio{
     font-size: larger;
     font-weight: bold;
-    padding-right: 4%;
+    padding-right: 2%;
 }
 .hio:hover{
     color: #F9CAEC;
     
+}
+.hlo{
+    text-align: right;
+}
+.oo{
+  padding-right: 0.1%;
+}
+.button1{
+    margin: none;
 }
