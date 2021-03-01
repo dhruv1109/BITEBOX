@@ -79,20 +79,24 @@ generateID = (length) => {
                 
              </div>
              <div className="footerr">
-               <h1>BITEBOX</h1>
-               <p>
-                 Cantact Us
-                 <br/>
-                 email:Goga@gmail.com
-                 <br/>
-                 insta: BITEBOX
-                 <br />
-                 whatsapp: lund nhi Dege
-                 <br />
-                  GOGA INC.
-               </p>
-             </div>
-             </div>
+               <div className="foothead">
+                 <h1>BITEBOX</h1>
+                 <h5>A small initiative by a small group of friends</h5>
+                </div>
+                <div className="footbody">
+                  <div className="contacts">
+                    <h3>Contact US</h3> 
+                    <p><i className="fab fa-instagram fa-2x"></i> <i className="fab fa-facebook fa-2x"></i> <i className="fab fa-linkedin fa-2x"></i> </p>
+                    <h5>Number: +91
+                    </h5>
+                    <h5>Email: bitebox@gmail.com</h5>
+                  </div>
+                  <div className="org">
+                    <h3>A GOGA CORPORATION PRODUCT</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
         )
     }
 }

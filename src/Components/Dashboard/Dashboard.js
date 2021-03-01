@@ -65,10 +65,23 @@ class Dashboard extends Component {
                    </div>
                </div>
                <div className="footerr">
+               <div className="foothead">
                  <h1>BITEBOX</h1>
-
-               </div>
-            
+                 <h5>A small initiative by a small group of friends</h5>
+                </div>
+                <div className="footbody">
+                  <div className="contacts">
+                    <h3>Contact US</h3> 
+                    <p><i className="fab fa-instagram fa-2x"></i> <i className="fab fa-facebook fa-2x"></i> <i className="fab fa-linkedin fa-2x"></i> </p>
+                    <h5>Number: +91
+                    </h5>
+                    <h5>Email: bitebox@gmail.com</h5>
+                  </div>
+                  <div className="org">
+                    <h3>A GOGA CORPORATION PRODUCT</h3>
+                  </div>
+                </div>
+              </div>
             </div>
         ) }
         else{
@@ -88,7 +101,7 @@ class Dashboard extends Component {
                 <div className="footbody">
                   <div className="contacts">
                     <h3>Contact US</h3> 
-                    <p><i className="fab fa-instagram fa-2x"></i> <i class="fab fa-facebook fa-2x"></i> <i class="fab fa-linkedin fa-2x"></i> </p>
+                    <p><i className="fab fa-instagram fa-2x"></i> <i className="fab fa-facebook fa-2x"></i> <i className="fab fa-linkedin fa-2x"></i> </p>
                     <h5>Number: +91
                     </h5>
                     <h5>Email: bitebox@gmail.com</h5>

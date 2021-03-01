@@ -14,6 +14,7 @@ firestore.collection('Order').doc(OrderID).set({
            Place: cred.location,
            OrderTime: new Date(),
            Price: addToCart.cartcost,
+           Items: addToCart.cartItems,
            Outlet: firestore.collection('Outlet').doc(addToCart.shopid),
            User: firestore.collection('Users').doc(auth.uid)
         }).then(()=> {
@@ -22,20 +23,22 @@ firestore.collection('Order').doc(OrderID).set({
         }).catch(err => {
             dispatch({ type: 'ORDER_ERROR', err });
          });
- 
-        
+       
          firestore.collection('Users').doc(auth.uid).collection('orders').doc(OrderID).set({
            reference: firestore.collection('Order').doc(OrderID),
            Price: addToCart.cartcost, 
+           Items: addToCart.cartItems,
            OrderTime: new Date(),
          })
          firestore.collection("Outlet").doc(addToCart.shopid).collection('orders').doc(OrderID).set({
           reference: firestore.collection('Order').doc(OrderID),
           user: firestore.collection('Users').doc(auth.uid),
           Price: addToCart.cartcost,
+          Items: addToCart.cartItems,
           OrderTime: new Date(),
           New: true
          })
+         
     }
 
 }

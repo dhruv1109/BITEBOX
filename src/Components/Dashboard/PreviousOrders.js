@@ -11,7 +11,7 @@ render(){
            {orders && orders.map(orders => {
              return(
                <div key={orders.id}>
-               <div> {orders.order}   {orders.Price}  </div>
+               <div> {orders.order}   {orders.Price}</div>
                </div>
              )
            })}
@@ -26,7 +26,9 @@ render(){
 }
 }
 const mapStateToProps = state => {
-    return {
+  console.log(state);  
+  return {
+     
       orders : state.firestore.ordered.orders,
       auth: state.firebase.auth
     };
