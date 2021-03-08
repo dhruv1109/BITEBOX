@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import logo from './images/BiteBoxLogo.jpeg'
 import ShopList from '../Shop/ShopList'
 import Slideshow from './Slideshow'
+import Notifications from './Notifications'
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
@@ -90,8 +91,14 @@ class Dashboard extends Component {
               <div className="namo ">
                   <p className="naam">Welcome {auth.displayName}, Let's get you started with some of the best food on campus!!!</p>
               </div>
-               <div>
-                   <ShopList  shops={shops}/>  
+               <div className="row">
+                 <div className="col-9">
+                   <ShopList  shops={shops}/> 
+                   </div> 
+                  <div className="col-3 notifications">
+                      <Notifications /> 
+                  <div>  
+               </div>     
              </div>
              <div className="footerr">
                <div className="foothead">
@@ -111,6 +118,7 @@ class Dashboard extends Component {
                   </div>
                 </div>
               </div>
+            </div>
             </div>
         )}
     }
