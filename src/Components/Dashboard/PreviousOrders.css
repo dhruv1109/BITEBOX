@@ -1,0 +1,21 @@
+.orderss{
+    padding-left: 2%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+   
+}
+.do{
+    border-bottom: 1px solid #66b2b2;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+.price{
+    text-align: right;
+}
+.txt{
+    font-weight: 600;
+}
+.hioe{
+    margin-bottom: 2%;
+    border-bottom: 1px solid #66b2b2;
+}

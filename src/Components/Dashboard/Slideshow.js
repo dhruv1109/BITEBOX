@@ -1,6 +1,5 @@
 import React from 'react';
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
+import logo from './images/BiteBoxLogo.jpeg'
 import EFFECTS from './images/EFFECTS.jpg'
 import oat from './images/oat.jpg'
 import thapatm from './images/thapatm.jpg'
@@ -10,24 +9,17 @@ import './Slideshow.css'
  
 const Slideshow = () => {
     return (
-      <div className="slide-container" >
-        <Slide>
-          <div className="each-slide" >
-            <div style={{'backgroundImage': `url(${thapatm})` }}>
-              <span>Slide 1</span>
-            </div>
-          </div>
-          <div className="each-slide">
-            <div style={{'backgroundImage': `url(${oat})`}}>
-              <span>Slide 2</span>
-            </div>
-          </div>
-          <div className="each-slide">
-            <div style={{'backgroundImage': `url(${EFFECTS})`}}>
-              <span>Slide 3</span>
-            </div>
-          </div>
-        </Slide>
+      <div className="row">
+        <div className="col-4">
+          <img className="img-thumbnail mx-auto" src={EFFECTS}  alt={logo} style={{maxWidth: 500, height: 500}}/>  
+        </div>
+        <div className="col-4">
+          <img className="img-thumbnail mx-auto" src={thapatm}  alt={logo} style={{maxWidth: 500, height: 500}}/>    
+        </div>
+        <div className="col-4">
+          <img className="img-thumbnail mx-auto" src={oat}  alt={logo} style={{maxWidth: 500, height: 500}}/>  
+        </div>
+       
       </div>
     )
 }

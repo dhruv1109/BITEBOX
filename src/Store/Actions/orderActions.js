@@ -8,6 +8,12 @@ export const  placeOrder = (cred, addToCart, auth, OrderID  ) => {
         } else{
               Delivery = false;
         }
+        let order = "";
+        let i = 0 ;
+        for( i = 0 ; i< addToCart.cartnumber ; i++ ){
+             order= order + addToCart.cartItems[i].Name  + ",";
+        }
+        console.log(order);
 firestore.collection('Order').doc(OrderID).set({
            Accepted: false,          
            Delivery: Delivery,
@@ -27,14 +33,16 @@ firestore.collection('Order').doc(OrderID).set({
          firestore.collection('Users').doc(auth.uid).collection('orders').doc(OrderID).set({
            reference: firestore.collection('Order').doc(OrderID),
            Price: addToCart.cartcost, 
-           Items: addToCart.cartItems,
+           Items: order,
            OrderTime: new Date(),
+           ShopName: addToCart.shop,
+           Outlet: firestore.collection('Outlet').doc(addToCart.shopid),
          })
          firestore.collection("Outlet").doc(addToCart.shopid).collection('orders').doc(OrderID).set({
           reference: firestore.collection('Order').doc(OrderID),
           user: firestore.collection('Users').doc(auth.uid),
           Price: addToCart.cartcost,
-          Items: addToCart.cartItems,
+          Items: order,
           OrderTime: new Date(),
           New: true
          })

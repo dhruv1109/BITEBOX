@@ -29,6 +29,7 @@
 .info{
     padding-top: 5%;
     background-image: url(https://image.freepik.com/free-vector/memphis-pattern_1045-810.jpg);
+    padding-left: 17%;
 }
 .footerr{
     margin-top: 4%;
@@ -51,36 +52,16 @@
     text-align: right;
     padding-right: 3.5%;
 }
-.two{
-    width: 100px;
-    padding-right: 5%;
-    padding-left: 5%;
-}
-.cards{
-    text-align: center;
-    margin-bottom: 3%;
-    width: 20%;
-    height: 20%;
-    padding-right: 5%;
-    padding-left: 5%;
-    transition: transform .2s;
-}
-.cards:hover {
-    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
- 
+
+
   .lelo{
       padding-left: 3%;
       padding-top: 5%;
-      padding-bottom: 5%;
+      padding-bottom: 2%;
       font-size: 40px;
       font-weight: 900;
   }
-  .card-text{
-      padding-top: 2%;
-      padding-bottom: 2%;
-      font-weight: 500;
-  }
+  
   .namo{
       padding-top: 1%;
       background-color: #ffea66;
@@ -91,3 +72,12 @@
       font-size: 30px;
       font-weight: 500;
   }
+  .Note{
+      margin-top: 4%;
+      padding-left: 10% ;
+      font-size: x-large;
+      border: 2px solid  #66b2b2;
+  }
+.jk{
+    margin-bottom: 4%;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import logo from './images/BiteBoxLogo.jpeg'
 import ShopList from '../Shop/ShopList'
 import Slideshow from './Slideshow'
+import Reasons from './Reasons'
 import Notifications from './Notifications'
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase'
@@ -20,50 +21,17 @@ class Dashboard extends Component {
                <div className=" Images "> 
                     <Slideshow />                       
                </div>
-               <h2 className="lelo"> FEW REASONS WHY YOU SHOULD USE OUR SERVICES</h2> 
-               <div className="info row">
-                   <div className="card cards col-12 ">
-                      <div className="row">
-                         <div className="col-5">
-                         <img className="card-img-top  mx-auto img-thumbnail" src="https://image.freepik.com/free-vector/delivery-man-riding-red-scooter-illustration_9845-14.jpg" alt={logo} style={{maxWidth: 350, height: 300}} />    
-                         </div>
-                         <div className="col-7">
-                          <p className="card-text">Tired of a whole day's work? Mess food not good? 
-                              not toworry we got u covered with the lighting fast food delivery service of BiteBox
-                          </p>
-                         </div>
-                      </div>    
-                   </div>
-                   <div className="card one  col-12 " >
-                   <div className="row">
-                         <div className="col-5">
-                         <img className="card-img-top  mx-auto img-thumbnail" src="https://image.freepik.com/free-vector/pastry-chefs-decorating-big-wedding-birthday-cake_74855-7772.jpg" alt={logo} style={{maxWidth: 350, height: 300}} />     
-                        </div>
-                        <div className="col-7">
-                          <p className="card-text">Planning for a Party or having a good time with homies..don't worry about food, We are here for you!! </p>
-                        </div>                   
-                     </div>
-                   </div>
-                   <div className="card  cards col-12 ">
-                   <div className="row">
-                         <div className="col-5">
-                         <img className="card-img-top  mx-auto img-thumbnail" src="https://image.freepik.com/free-vector/boy-studying-with-book_113065-238.jpg" alt={logo} style={{maxWidth: 350, height: 300}} />     
-                         </div>
-                         <div className="col-7">
-                          <p className="card-text">Studying late night, want to eat something but dont want to go out no problem we are here to delivery the tastiest food on campus to you.</p> 
-                          </div>
-                       </div>
-                   </div>
-                   <div className="card one  col-12 ">
-                   <div className="row">
-                         <div className="col-5">
-                         <img className="card-img-top  mx-auto img-thumbnail" src="https://image.freepik.com/free-vector/illustrated-types-face-masks_23-2148604345.jpg" alt={logo} style={{maxWidth: 350, height: 300}} />     
-                        </div>
-                        <div className="col-7">
-                          <p className="card-text">We all the current scenario of the post covid world and we all know it is preferable to stay away from crowded places. So to avoid large rush on eateries across campus we are here to deliver food to your hostel-step .</p>
-                        </div>                 
-                 </div>
-                   </div>
+               <div>
+                 <Reasons />
+               </div>
+               <div className="Note">
+                 <h2>A Note from the Developer</h2>
+                <p>Heya user, hope you worked smoothly throught the website. Please feel free to give feedback about the website 
+                  at lakshyakatyal28@gmail.com . We are here to develop the website as we grow and your feedback will help us a lot.
+                 <div> Peace</div> 
+                  <div>Developer</div>
+                </p>
+
                </div>
                <div className="footerr">
                <div className="foothead">
@@ -84,7 +52,8 @@ class Dashboard extends Component {
                 </div>
               </div>
             </div>
-        ) }
+            
+            ) }
         else{
         return(
             <div className="dem" >

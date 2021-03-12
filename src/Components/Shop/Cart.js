@@ -29,16 +29,16 @@ class Cart extends Component{
                   <form className="plane"> 
                   {addToCart.cartItems.map((item, index) => (
                     <div key={index} className="items">
-                    <div>{item.Name}  
-                       Rs { item.Price }
+                    <div>{item.Name}</div>  
+                    <div>  Rs { item.Price }
                     </div>
                     <div className="right">
                       <button
-                        className="btn btn-outline-danger"
+                        className="btn  btn-sm btn-outline-danger"
                         type="button" 
                         onClick={()=>{this.handleRemove(item)}}
                       >
-                        Remove
+                        Remove <i className="fas fa-trash-alt"></i>
                       </button>
                     </div>
                   </div>
