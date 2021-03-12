@@ -4,24 +4,31 @@
 .nav-item{
     color: black;
 }
-.hoe{
-    color: cornsilk;
-}
+
 .hio{
-    font-size: larger;
+    font-size: x-large;
     font-weight: bold;
     padding-right: 2%;
 }
 .hio:hover{
-    color: #F9CAEC;
-    
+    color: skyblue;
+    text-shadow: 2px 2px 5px blue;
+  
 }
-.hlo{
-    text-align: right;
+.n1{
+    font-size: large;
+    font-weight: bold;
 }
-.oo{
-  padding-right: 0.1%;
+
+.n2{
+    cursor: pointer;
 }
-.button1{
-    margin: none;
+.hell{
+    padding-right: 5%;
 }
+.helli{
+    font-size: large;
+    font-weight: bold;
+    padding-left: 5%;
+}
+

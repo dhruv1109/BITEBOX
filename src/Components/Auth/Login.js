@@ -21,6 +21,8 @@ class Login extends Component {
     render() {
       const { auth, authError } = this.props;
       if (auth.uid) return <Redirect to='/account' />   
+      const {email, password} = this.state;
+      const isEnabled = email.length > 0 && password.length > 0;
         return(
           <div className="dad" >
             <div className="container containers">
@@ -38,7 +40,7 @@ class Login extends Component {
              <input type="password" required={true} onChange={this.handleChange} className="form-control" id="password"  />
            </div>
             <div className="signup">
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" disabled={!isEnabled} className="btn btn-primary">Submit</button>
              <div className="center red-text">
               { authError ? <p>{authError}</p> : null }
             </div>

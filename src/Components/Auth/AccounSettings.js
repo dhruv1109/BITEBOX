@@ -6,8 +6,8 @@ import './AccountSettings.css'
 import { Redirect} from 'react-router-dom'
 class Account extends Component {
     state = {
-        name: '',
-        phone: ''
+        name: "",
+        phone: ""
     }
     handleChange = (e) => {
         this.setState({
@@ -16,12 +16,15 @@ class Account extends Component {
       }   
       handleSubmit = (e) => {
         e.preventDefault();
+       
         console.log(this.state);
         this.props.adDetails(this.state)
       }    
    render() {
        const {auth} = this.props
        if (!auth.uid) return <Redirect to='/login' />
+       const {name, phone}= this.state;
+       const isEnabled = name.length > 0 && phone.length > 0;
        return(
            <div className="dad">
               
@@ -39,7 +42,7 @@ class Account extends Component {
                </div>
                <div className="pp">
                  <div className="boton">
-                   <Link to='/'><button type="submit" className="btn" >Submit</button></Link>
+                   <Link to='/'><button type="submit" disabled={!isEnabled} className="btn" >Submit</button></Link>
                 </div>
                
                </div> 

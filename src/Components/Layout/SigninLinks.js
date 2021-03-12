@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { signOut } from '../../Store/Actions/authActions'
@@ -7,17 +8,18 @@ import './Navbar.css'
   const SigninLinks = (props) => {
     return (
        <div>
-           <button className="navbar-toggler button1" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-           </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
-          <NavLink to='/Porders'><li className="nav-item oo">ORDERS</li></NavLink>
-          <span onClick={props.signOut}> <li className="nav-item oo " ><i className="fas fa-sign-out-alt fa-lg">SignOut</i></li></span>
-          <NavLink to='/cart'> <li className="nav-item oo"> <i className="fas fa-shopping-cart fa-lg">CART</i></li></NavLink>
-             </ul>
-          </div>
-  
+              <nav className=" my-navbar navbar navbar-light ">   
+               <Link to='/' className="navbar-brand hio">BITEBOX</Link>
+         
+              <div className="n1">
+                <NavLink to='/Porders'><div className="nav-item w3-bar-item w3-button ">ORDERS</div></NavLink>
+              </div> 
+              <div className="n2">
+                <span onClick={props.signOut}> <div className="nav-item  " ><i className="fas fa-sign-out-alt fa-lg"> SignOut</i></div></span>
+                </div>  
+                <NavLink to='/cart'> <div className="nav-item "> <i className="fas fa-shopping-cart fa-lg"> CART</i></div></NavLink>
+              
+              </nav>
         </div>
     )
   }
