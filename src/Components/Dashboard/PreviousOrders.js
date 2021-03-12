@@ -14,6 +14,7 @@ render(){
            {orders && orders.map(orders => {
              return(
                <div  className="do container" key={orders.id}>
+               <h3>{orders.ShopName}</h3>  
                <div className="txt">Items ordered:</div>
                <div> {orders.Items}   <div className="price">Rs {orders.Price}</div> </div>
                <div className="txt">Ordered on:</div>

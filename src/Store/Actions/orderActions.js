@@ -13,7 +13,8 @@ export const  placeOrder = (cred, addToCart, auth, OrderID  ) => {
         for( i = 0 ; i< addToCart.cartnumber ; i++ ){
              order= order + addToCart.cartItems[i].Name  + ",";
         }
-        console.log(order);
+        let ShopName = addToCart.shop.name;
+        console.log(ShopName);
 firestore.collection('Order').doc(OrderID).set({
            Accepted: false,          
            Delivery: Delivery,
@@ -35,7 +36,7 @@ firestore.collection('Order').doc(OrderID).set({
            Price: addToCart.cartcost, 
            Items: order,
            OrderTime: new Date(),
-           ShopName: addToCart.shop,
+           ShopName: ShopName,
            Outlet: firestore.collection('Outlet').doc(addToCart.shopid),
          })
          firestore.collection("Outlet").doc(addToCart.shopid).collection('orders').doc(OrderID).set({

@@ -9,13 +9,13 @@ state = {
    delivery: "Delivery",
 }
 handleChange = (e) => {
-  console.log(this.state)
   this.setState({
     [e.target.id]: e.target.value
   })
 }
 handleSubmit = (addToCart, auth) => {
   var OrderID = this.generateID(8);
+  console.log(this.state)
   this.props.placeOrder(this.state, addToCart, auth, OrderID)
 }
 generateID = (length) => {
@@ -101,6 +101,7 @@ generateID = (length) => {
     }
 }
 const mapStatToProps = (state) => {
+    console.log(state)
     return {
       addToCart: state.cart,
       auth: state.firebase.auth
