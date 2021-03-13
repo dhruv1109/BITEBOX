@@ -43,7 +43,7 @@ firestore.collection('Order').doc(OrderID).set({
           reference: firestore.collection('Order').doc(OrderID),
           user: firestore.collection('Users').doc(auth.uid),
           Price: addToCart.cartcost,
-          Items: order,
+          order: order,
           OrderTime: new Date(),
           New: true
          })

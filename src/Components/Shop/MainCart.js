@@ -6,18 +6,22 @@ import './MainCart.css'
 class MCart extends Component {
 state = {
    location: "",
-   delivery: "Delivery",
+   delivery: "",
 }
 handleChange = (e) => {
   this.setState({
     [e.target.id]: e.target.value
   })
+  
 }
+
 handleSubmit = (addToCart, auth) => {
+ 
   var OrderID = this.generateID(8);
-  console.log(this.state)
-  this.props.placeOrder(this.state, addToCart, auth, OrderID)
+  this.props.placeOrder(this.state,addToCart, auth, OrderID)
 }
+
+
 generateID = (length) => {
   var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('');
 
@@ -33,11 +37,14 @@ generateID = (length) => {
 }
     render() {
       const  {addToCart, auth } = this.props 
+      
+      const {location, delivery}= this.state;
+      const isEnabled = location.length > 0 && delivery.length > 0;
       if(addToCart.cartnumber===0) return <Redirect to='/cart'/>        
         return(
             <div className="papa"> 
             <div  className="container leeds">
-              <form  >
+              <form >
               <h3>{ addToCart.shop.name }</h3>
                   {addToCart.cartItems.map((item,index) => (
                     <div key={index} className="items">
@@ -64,16 +71,17 @@ generateID = (length) => {
               <option value="Library">Library</option>
               <option value="ICIC/SBI">ICICI/SBI</option>
            </select>
-           <select className="btn btn-info" type="button" id="delivery" onChange={this.handleChange} required> 
+  <select className="btn btn-info" type="button" id="delivery" onChange={this.handleChange} required> 
+             <option value="Select" >Select</option>
              <option value="Delivery">Delivery</option>
              <option value="Pickup" >Pickup</option>
-           </select>          
+           </select>       
 
               { addToCart.shop.Discount === 0?  <div></div>  :<h4>Yay dicount of Rs {addToCart.shop.Discount}</h4>} 
               {addToCart.shop.Tax=== 0? <div></div>: <h4>Taxes: Rs { addToCart.shop.Tax}</h4> }  
               <h4>Delivery Charges:(On orders below Rs {addToCart.shop.MinOrder}) Rs { addToCart.shop.DeliveryCharge } </h4>
               <h3 id="cost" onChange={this.handleChange} >Total Cost: Rs { addToCart.cartcost}</h3>     
-              <Link to="/"> <button className="btn btn-info bi" type="button"onClick={this.handleSubmit(addToCart, auth)} >PLACE ORDER</button> </Link>
+              <Link to="/"> <button className="btn btn-info bi" disabled={!isEnabled} type="button"onClick={this.handleSubmit(addToCart, auth )} >PLACE ORDER</button> </Link>
              </div>
              </form>
                 
