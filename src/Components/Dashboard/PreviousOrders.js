@@ -46,9 +46,13 @@ export default compose(connect(mapStateToProps),
 firestoreConnect(Props => [{ collection: 'Users' },
 {
   collection: 'Users',
+
   doc: Props.auth.uid,
+
   subcollections: [{ collection: 'orders' }],
+
   storeAs: 'orders'
+  
 }
 
 ]) )(Previous)
