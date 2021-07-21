@@ -26,6 +26,7 @@ class Dashboard extends Component {
                </div>
                <div className="Note">
                  <h2>A Note from the Developer</h2>
+                 
                 <p>Heya user, hope you worked smoothly throught the website. Please feel free to give feedback about the website 
                   at lakshyakatyal28@gmail.com . We are here to develop the website as we grow and your feedback will help us a lot.
                  <div> Peace</div> 
@@ -96,6 +97,7 @@ const mapStateToProps = (state) => {
     console.log(state);
 return{ 
  shops: state.firestore.ordered.Outlet,
+
  auth: state.firebase.auth
 } 
 }
